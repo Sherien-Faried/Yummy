@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exam2</title>
+    <!-- icons -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-black">
+    <section
+      id="loading"
+      class="d-flex justify-content-center align-items-center d-none"
+      style="display: none"
+    >
+      <i class="fas fa-spinner fa-4x text-white fa-spin-pulse"></i>
+    </section>
+    <section
+      id="sideBar"
+      class="vh-100 position-fixed top-0 d-flex z-3"
+      style="left: -200px"
+    >
+      <div
+        id="sideHidden"
+        class="vh-100 bg-black text-white p-4 d-flex flex-column justify-content-between"
+        style="width: 200px"
+      >
+        <div class="d-flex flex-column links">
+          <a
+            href="#"
+            id="search"
+            class="position-relative"
+            style="top: 100px; display: none"
+            >Search</a
+          >
+          <a
+            href="#"
+            id="categories"
+            class="position-relative"
+            style="top: 100px; display: none"
+            >Categories</a
+          >
+          <a
+            href="#"
+            id="area"
+            class="position-relative"
+            style="top: 100px; display: none"
+            >Area</a
+          >
+          <a
+            href="#"
+            id="Ingredients"
+            class="position-relative"
+            style="top: 100px; display: none"
+            >Ingredients</a
+          >
+          <a
+            href="#"
+            id="contacts"
+            class="position-relative"
+            style="top: 100px; display: none"
+            >Contact Us</a
+          >
+        </div>
+        <div>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-solid fa-globe"></i></a>
+          <p>Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+      <div
+        id="sideShowen"
+        class="vh-100 bg-white d-flex flex-column justify-content-between align-items-center py-3 text-black"
+        style="width: 75px"
+      >
+        <img src="./img/logo.png" class="w-75" />
+        <div id="bars">
+          <i class="fa-solid fa-bars fs-2" id="barsClosed"></i>
+          <i
+            class="fa-solid fa-xmark fs-2"
+            style="display: none"
+            id="barsOpen"
+          ></i>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <a href=""><i class="fa-solid fa-globe"></i></a>
+          <a href=""><i class="fa-solid fa-share-nodes pt-2"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-left: 75px">
+      <div class="container">
+        <section id="main" class="my-4">
+          <div id="searchBar" style="display: none">
+            <div class="d-flex justify-content-center mb-3">
+              <input
+                type="text"
+                placeholder="Search By Name"
+                id="searchN"
+                class="bg-black border border-white rounded w-50 p-2 me-2 text-white"
+              />
+              <input
+                type="text"
+                placeholder="Search By First Letter"
+                id="searchL"
+                maxlength="1"
+                class="bg-black border border-white rounded w-50 p-2 ms-2 text-white"
+              />
+            </div>
+          </div>
+          <div class="row row-cols-4 g-3" id="mainMeals"></div>
+        </section>
+        <section id="contact" style="display: none">
+          <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div class="w-75">
+              <div class="row row-cols-2 g-3">
+                <div class="col">
+                  <input
+                    type="text"
+                    id="uName"
+                    placeholder="Enter Your Name"
+                    class="bg-white border border-dark rounded p-2 w-100"
+                  />
+                  <p class="text-warning px-2 pt-2">
+                    Enter valid Name *First name starts with uppercase and then
+                    Last name*
+                  </p>
+                </div>
+                <div class="col">
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Your Email"
+                    class="bg-white border border-dark rounded p-2 w-100"
+                  />
+                  <p class="text-warning px-2 pt-2">
+                    Enter valid Email *exemple@yyy.zzz
+                  </p>
+                </div>
+                <div class="col">
+                  <input
+                    type="tel"
+                    id="tel"
+                    placeholder="Enter Your Phone"
+                    class="bg-white border border-dark rounded p-2 w-100"
+                  />
+                  <p class="text-warning px-2 pt-2">Enter valid Phone Number</p>
+                </div>
+                <div class="col">
+                  <input
+                    type="number"
+                    id="age"
+                    placeholder="Enter Your Age"
+                    class="bg-white border border-dark rounded p-2 w-100"
+                  />
+                  <p class="text-warning px-2 pt-2">Enter valid Age</p>
+                </div>
+                <div class="col">
+                  <input
+                    type="password"
+                    id="pass"
+                    placeholder="Enter Your Password"
+                    class="bg-white border border-dark rounded p-2 w-100"
+                  />
+                  <p class="text-warning px-2 pt-2">
+                    Enter valid password *Minimum eight characters, at least one
+                    letter and one number:*
+                  </p>
+                </div>
+                <div class="col">
+                  <input
+                    type="password"
+                    id="repass"
+                    placeholder="Repassword"
+                    class="bg-white border border-dark rounded p-2 w-100"
+                  />
+                  <p class="text-warning px-2 pt-2">password doesn't match</p>
+                </div>
+              </div>
+              <button
+                class="btn btn-warning mt-3 d-block mx-auto"
+                disabled
+                id="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </section>
+        <section id="meal" style="display: none">
+          <div class="row g-3">
+            <div class="col-4">
+              <div>
+                <img
+                  src="./img/4er7mj1598733193.jpg"
+                  class="w-100 mt-2"
+                  id="mealImg"
+                  alt=""
+                />
+                <h2 id="mealName"></h2>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="text-white">
+                <h2 class="">Instructions</h2>
+                <p id="inst">
+                  she8in through your lentils for any foreign debris, rinse them
+                  2 or 3 times, drain, and set aside. Fair warning, this will
+                  probably turn your lentils into a solid block that you’ll have
+                  to break up later In a large pot over medium-high heat, sauté
+                  the olive oil and the onion with a pinch of salt for about 3
+                  minutes, then add the carrots and cook for another 3 minutes.
+                  Add the tomato paste and stir it around for around 1 minute.
+                  Now add the cumin, paprika, mint, thyme, black pepper, and red
+                  pepper as quickly as you can and stir for 10 seconds to bloom
+                  the spices. Congratulate yourself on how amazing your house
+                  now smells. Immediately add the lentils, water, broth, and
+                  salt. Bring the soup to a (gentle) boil. After it has come to
+                  a boil, reduce heat to medium-low, cover the pot halfway, and
+                  cook for 15-20 minutes or until the lentils have fallen apart
+                  and the carrots are completely cooked. After the soup has
+                  cooked and the lentils are tender, blend the soup either in a
+                  blender or simply use a hand blender to reach the consistency
+                  you desire. Taste for seasoning and add more salt if
+                  necessary. Serve with crushed-up crackers, torn up bread, or
+                  something else to add some extra thickness. You could also use
+                  a traditional thickener (like cornstarch or flour), but I
+                  prefer to add crackers for some texture and saltiness. Makes
+                  great leftovers, stays good in the fridge for about a week.
+                </p>
+                <h3>Area: <span id="mealArea"></span></h3>
+                <h3>Category: <span id="mealCat"></span></h3>
+                <h3>Recipes:</h3>
+                <ul id="recipes" class="text-primary">
+                  <!-- <li class=" bg-primary-subtle p-2 rounded-2"><span>1 cup</span> Lentils</li> -->
+                </ul>
+                <h3>Tags:</h3>
+                <ul id="tags" class="text-danger">
+                  <!-- <li class="bg-danger-subtle p-2 rounded-2">1 cup Lentils</li>
+                  <li class="bg-danger-subtle p-2 rounded-2">1 large Onion</li> -->
+                </ul>
+                <div id="mealLink" class="mb-4">
+                  <!-- <a href="" target="_blank" class="btn btn-success">Source</a>
+                  <a href="" target="_blank" class="btn btn-danger">Youtube</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- jquary -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <!-- js -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

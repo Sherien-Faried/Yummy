@@ -1,0 +1,41 @@
+a{
+    color: inherit;
+    text-decoration-line: none;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    margin:5px;
+}
+.links a{
+    margin: 10px 0;
+}
+#mainMeals .col, #bars{
+    cursor: pointer;
+}
+#mainMeals .col .overlay{
+    background-color: rgba(255, 255, 255, 0.6);
+    inset: 0;
+    position: absolute;
+    top: 150%;
+    transition: top 0.5s;
+}
+#mainMeals .col:hover .overlay{
+    top: 0;
+}
+
+#contact p{
+    display: none;
+}
+
+#loading{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+}
